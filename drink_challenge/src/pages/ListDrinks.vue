@@ -1,8 +1,9 @@
 <template>
     <main>
+        <NavbarList />
         <section class="container">
             <div class="title">
-                <h1>Os melhores drinks não-acoólicos do Brasil</h1>
+                <h1>Os melhores drinks não-acoólicos <span style="color:#4094F7">do Brasil</span></h1>
                 <p>{{drinks.length}} resultados encontrados</p>
             </div>
         <div class="drinks">
@@ -20,8 +21,12 @@
 
 <script>
 import api from '@/services/api.js';
+import NavbarList from '../components/NavbarList';
 export default {
     name: "ListDrinks",
+    components: {
+         NavbarList,
+    },
     data(){
         return {
             drinks: []
@@ -54,6 +59,7 @@ export default {
         font-size: 2rem;
         font-weight: 800;
         color: #252C32;
+        font-weight: 600;
     }
     .title p{
         margin-bottom: 1%;
@@ -64,7 +70,7 @@ export default {
         width: 100%;
     }
     .drinks{
-        width: 65%;
+        width: 80%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -79,6 +85,20 @@ export default {
         margin-bottom: 1%;
         font-size: 1rem;
         font-weight: 600;
+        display: flex;
+        flex-direction: flex-start;
+        padding: 10% 10% 0% 8%;
+        color: #252C32;
+        font-weight: 400;
+        text-decoration: none;
+    }
+    .drink p{
+        display: flex;
+        flex-direction: flex-start;
+        padding: 0% 2% 5% 8%;
+        font-weight: 600;
+        color: #252C32;
+        text-decoration: none;
     }
 
 </style>

@@ -1,7 +1,6 @@
 <template>
   <div id="app">
 
-    <Navbar />
     <router-view path="$router.key" />
 
   </div>
@@ -10,13 +9,9 @@
 <script>
 import './styles/global.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/Navbar.vue';
 
 export default {
   name: 'App',
-  components: {
-    Navbar,
-  }
 }
 </script>
 
