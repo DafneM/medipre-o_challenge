@@ -1,6 +1,6 @@
 # medipre-o_challenge
 
-## Medipreço frontend
+## MediPreço frontend
 
 This project is a challenge made in vue.js.
 
