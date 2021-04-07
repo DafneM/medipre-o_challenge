@@ -3,13 +3,15 @@
         <section class="container">
             <div class="title">
                 <h1>Os melhores drinks não-acoólicos do Brasil</h1>
-                <p>50 resultados encontrados</p>
+                <p>{{drinks.length}} resultados encontrados</p>
             </div>
         <div class="drinks">
             <div v-for="(drink,index) in drinks" class="drink"  :key="index">
-                <img id="imageDrink" :src="drink.strDrinkThumb" :alt="drink.strDrink">
-                <h1>{{drink.strDrink}}</h1>
-                <p>#{{drink.idDrink}}</p>
+                    <router-link class="router-link" :to="'/drink/' + drink.idDrink">
+                    <img id="imageDrink" :src="drink.strDrinkThumb" :alt="drink.strDrink">
+                    <h1>{{drink.strDrink}}</h1>
+                    <p>#{{drink.idDrink}}</p>
+                    </router-link>
             </div>
         </div>
         </section>
@@ -28,6 +30,7 @@ export default {
     mounted(){
         api.get('filter.php?a=Non_Alcoholic').then(response => {
             this.drinks = response.data.drinks;
+            console.log(response.data);
         });
     }
 }
