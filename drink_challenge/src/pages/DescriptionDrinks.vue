@@ -3,7 +3,7 @@
        <NavbarDescription />
         <section class="container-description">
         <div class="drinks-description">
-            <div v-for="(drink,index) in drinks" :key=index>
+            <div v-for="(drink,index) in drinks" :key=index id="informations-drinks">
                 <div id="route-top">
                     <p id="drink-route">Home</p>
                     <img id="vector-arrow" src="../assets/Vector.svg" alt="arrow">
@@ -134,7 +134,6 @@
                             </div>
                             <hr>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -170,54 +169,62 @@ export default {
 
 <style>
 .container-description{
-    width: 100%;
+    width: 100vw;
     height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0;
 }
 .drinks-description{
     display: flex;
     align-items: center;
-    width: 70%;
+    width: 100vw;
+    height: 50vh;
 }
  .drink-description{
+    width: 100vw;
      display: flex;
      flex-direction: row;
      justify-content: center;
      align-items: center;
-     width: max-content;
      margin-top: 0%;
+ }
+ #informations-drinks{
+     width: 100%;
  }
  #route-top{
      display: flex;
      flex-direction: row;
-     width: 15%;
-     margin-top: 2%;
+     width: 20vw;
+     margin-top: 10vh;
+     margin-left: 20vw;
      height: 10vh;
      padding: 0;
  }
  #name-drink-route{
      margin: 0;
      padding: 2%;
-     width: 2000px;
+     width: 100vw;
      display: flex;
      align-items: center;
+     color:  #252C32;
  }
 #drink-route{
      margin: 0;
      padding: 3%;
-     width: 500px;
+     width: 100%;
      display: flex;
      align-items: center;
+    color: #6E7C87;
  }
  #image-container{
-    width: 70%;
+    width: 40vw;
     height: 10%; 
  }
  #image-drink{
     width: 80%;
-    height: 100%;
+    height: 70%;
  }
  .name-and-id{
      display: flex;
@@ -227,7 +234,7 @@ export default {
      margin-left: 0%;
  }
  .name-and-id h1{
-     width: 500px;
+     width: 100%;
      font-size: 2rem;
      font-weight: 700;
      color: #252C32;
@@ -254,12 +261,12 @@ export default {
      background-color: #4094F7;
      color: white;
      padding: 0.5rem 0rem 0.5rem 0rem;
-     margin-top: 2%;
+     margin-top: 5%;
      margin-bottom: 2%;
     outline: none;
     border: none;
     border-radius: 6px;
-    width: 100%;
+    width: 20vw;
  }
  #button-back:hover{
      background: linear-gradient(180deg, #E8C9FB 0%, rgba(255, 255, 255, 0) 100%), #4094F7;
@@ -284,7 +291,62 @@ export default {
      align-items: flex-start;
  }
 hr{
-     width: 150%;
-     margin: 0;
+     width: 100%;
  }
+@media(max-width:1500px){
+     #button-back{
+         width: 50vw;
+         margin-left: 0;
+     }
+ } 
+
+ @media(max-width:425px){
+     .drink-description{
+         display: flex;
+         flex-direction: column;
+     }
+     .name-and-id h1{
+         width: 100vw;
+     }
+     #image-container{
+         margin-top: 70vh;
+         margin-bottom: 10vw;
+     }
+     hr{
+         width: 100%;
+     }
+     #button-back{
+         width: 80vw;
+    }
+    .description-category-glass{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .name-and-id{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .name-and-id h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ingredientes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25vh;
+    }
+    #route-top{
+        display: none;
+    }
+    #name-drink-route{
+        display: none;
+    }
+    #drink-route{
+        display: none;
+    }
+ } 
 </style>

@@ -5,7 +5,7 @@
 
     <ul class="nav flex-column">
       <li class="nav-item">
-        <b-navbar-brand class="medidrinks">Medi<span style="color:#4094F7">drinks</span></b-navbar-brand>
+        <b-navbar-brand class="medidrinks">Medi<span style="color:#4094F7">Drinks</span></b-navbar-brand>
       </li>
       <li class="nav-item">
         <img src="../assets/Locationmarker.png" class="d-inline-block align-top" alt="Location">
@@ -15,8 +15,8 @@
 
     <b-navbar-nav class="ml-auto">
 
-          <b-button variant="light">
-            <img src="../assets/image32.png" class="d-inline-block align-top" alt="Kitten">
+          <b-button variant="white">
+            <img src="../assets/image32.png" class="d-inline-block align-top" alt="email">
             @luizfrombrasil
             </b-button>
       </b-navbar-nav>

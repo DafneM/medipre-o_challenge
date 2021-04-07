@@ -100,5 +100,13 @@ export default {
         color: #252C32;
         text-decoration: none;
     }
+    @media(max-width: 425px){
+        .title{
+        margin-top: 20%;
+        }
+        .drinks{
+            width: 100%;
+        }
+    }
 
 </style>
